@@ -17,3 +17,25 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+WebUI.click(findTestObject('Sidebar/a_Admin'))
+
+WebUI.waitForElementVisible(findTestObject('Page - Admin/User Management/Users/h5_System Users'), 0)
+
+WebUI.click(findTestObject('Page - Admin/Navbar/User Management/li_User Management'))
+
+WebUI.click(findTestObject('Page - Admin/Navbar/User Management/li_Users'))
+
+WebUI.waitForPageLoad(GlobalVariable.timeout)
+
+WebUI.verifyElementPresent(findTestObject('Page - Admin/User Management/Users/h5_System Users'), 0)
+
+WebUI.verifyElementPresent(findTestObject('Page - Admin/User Management/Users/div_UsernameAscendingDecending'), 0)
+
+WebUI.verifyElementPresent(findTestObject('Page - Admin/User Management/Users/div_User RoleAscendingDecending'), 0)
+
+WebUI.verifyElementPresent(findTestObject('Page - Admin/User Management/Users/div_Employee NameAscendingDecending'), 0)
+
+WebUI.verifyElementPresent(findTestObject('Page - Admin/User Management/Users/div_StatusAscendingDecending'), 0)
+
+WebUI.takeScreenshot()
+

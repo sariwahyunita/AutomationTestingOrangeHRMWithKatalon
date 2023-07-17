@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>TC004</name>
+   <name>TC005</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -10,7 +10,7 @@
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <rerunImmediately>false</rerunImmediately>
-   <testSuiteGuid>6a80e124-689d-40f0-9268-35420f6bb00c</testSuiteGuid>
+   <testSuiteGuid>db16c3fc-0540-45b6-8b06-cd4037ada229</testSuiteGuid>
    <testCaseLink>
       <guid>90bbf68f-46a6-4847-8a78-06d7f178056c</guid>
       <isReuseDriver>false</isReuseDriver>
@@ -19,7 +19,7 @@
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>e4fe886e-0e11-4952-b643-70636697094f</guid>
+      <guid>95b7a9c6-b542-4fc7-82b2-07576d521c69</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Login/Login - valid</testCaseId>
@@ -29,7 +29,7 @@
       <guid>369a9c29-c66d-4fef-95ff-c60c55b21fe0</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Admin/User Management/Users/View User Management</testCaseId>
+      <testCaseId>Test Cases/Admin/User Management/Users/Search User Management</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
