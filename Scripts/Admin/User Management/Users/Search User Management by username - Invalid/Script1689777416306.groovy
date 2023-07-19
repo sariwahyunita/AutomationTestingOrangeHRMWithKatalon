@@ -18,10 +18,6 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 
-WebUI.callTestCase(findTestCase('General/Open browser'), [:], FailureHandling.STOP_ON_FAILURE)
-
-WebUI.callTestCase(findTestCase('Login/Login - valid'), [:], FailureHandling.STOP_ON_FAILURE)
-
 WebUI.click(findTestObject('Sidebar/a_Admin'))
 
 WebUI.waitForElementPresent(findTestObject('Page - Admin/User Management/Users/h5_System Users'), 0)
@@ -39,18 +35,9 @@ WebUI.click(findTestObject('Page - Admin/User Management/Users/Section - Search 
 WebUI.verifyElementPresent(findTestObject('Page - Admin/User Management/Users/Section - Table Users/span_Record Found'), 
     GlobalVariable.timeout)
 
-WebUI.verifyElementText(findTestObject('Page - Admin/User Management/Users/Section - Table Users/div_username'), keysearch)
+WebUI.verifyElementText(findTestObject('Page - Admin/User Management/Users/Section - Table Users/span_Record Found'), No Records Found)
 
-countOfElements = WebUiCommonHelper.findWebElements(findTestObject('Page - Admin/User Management/Users/Section - Table Users/div_username'), 
-    5).size()
-
-println(countOfElements)
-
-countOfData = WebUI.concatenate(((['(', countOfElements - 1, ') Record Found']) as String[]), FailureHandling.STOP_ON_FAILURE)
-
-println(countOfData)
-
-WebUI.verifyElementText(findTestObject('Page - Admin/User Management/Users/Section - Table Users/span_Record Found'), countOfData)
+WebUI.verifyElementNotPresent(findTestObject('Page - Admin/User Management/Users/Section - Table Users/div_username'), keysearch)
 
 WebUI.takeScreenshot()
 

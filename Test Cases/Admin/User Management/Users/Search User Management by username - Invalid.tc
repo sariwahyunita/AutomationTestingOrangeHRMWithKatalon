@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Search User Management</name>
+   <name>Search User Management by username - Invalid</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>54a4a0b9-492a-4d60-a60d-8a607fc99e17</testCaseGuid>
+   <testCaseGuid>0550dccd-2d18-40b4-9add-a06c2e7f1106</testCaseGuid>
    <variableLinks>
       <testDataLinkId></testDataLinkId>
       <type>DEFAULT</type>
       <value></value>
-      <variableId>d5eb3f01-fa20-49d3-a089-8a04993f6a99</variableId>
+      <variableId>e4b63bc3-5324-48f2-a2bf-680d190f4678</variableId>
    </variableLinks>
    <variable>
-      <defaultValue>'Priyanka'</defaultValue>
+      <defaultValue>'xxxx'</defaultValue>
       <description></description>
-      <id>d5eb3f01-fa20-49d3-a089-8a04993f6a99</id>
+      <id>e4b63bc3-5324-48f2-a2bf-680d190f4678</id>
       <masked>false</masked>
       <name>keysearch</name>
    </variable>
