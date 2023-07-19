@@ -16,6 +16,11 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
+
+WebUI.callTestCase(findTestCase('General/Open browser'), [:], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.callTestCase(findTestCase('Login/Login - valid'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Sidebar/a_Admin'))
 
@@ -27,14 +32,25 @@ WebUI.click(findTestObject('Page - Admin/Navbar/User Management/li_Users'))
 
 WebUI.waitForPageLoad(GlobalVariable.timeout)
 
-WebUI.setText(findTestObject('Page - Admin/User Management/Users/Section - Search Users/input_Username'), 'Admin')
+WebUI.setText(findTestObject('Page - Admin/User Management/Users/Section - Search Users/input_Username'), keysearch)
 
 WebUI.click(findTestObject('Page - Admin/User Management/Users/Section - Search Users/button_Search'))
 
 WebUI.verifyElementPresent(findTestObject('Page - Admin/User Management/Users/Section - Table Users/span_Record Found'), 
     GlobalVariable.timeout)
 
-WebUI.verifyElementText(findTestObject('Page - Admin/User Management/Users/Section - Table Users/div_username'), 'Admin')
+WebUI.verifyElementText(findTestObject('Page - Admin/User Management/Users/Section - Table Users/div_username'), keysearch)
+
+countOfElements = WebUiCommonHelper.findWebElements(findTestObject('Page - Admin/User Management/Users/Section - Table Users/div_username'), 
+    5).size()
+
+println(countOfElements)
+
+countOfData = WebUI.concatenate(((['(', countOfElements - 1, ') Record Found']) as String[]), FailureHandling.STOP_ON_FAILURE)
+
+println(countOfData)
+
+WebUI.verifyElementText(findTestObject('Page - Admin/User Management/Users/Section - Table Users/span_Record Found'), countOfData)
 
 WebUI.takeScreenshot()
 

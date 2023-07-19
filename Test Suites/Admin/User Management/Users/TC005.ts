@@ -31,6 +31,12 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/Admin/User Management/Users/Search User Management</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>d5eb3f01-fa20-49d3-a089-8a04993f6a99</variableId>
+      </variableLink>
    </testCaseLink>
    <testCaseLink>
       <guid>a8f947ce-5079-4866-99ab-6ff6abf13cd6</guid>
