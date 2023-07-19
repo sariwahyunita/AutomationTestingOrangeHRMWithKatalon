@@ -29,7 +29,7 @@
       <guid>369a9c29-c66d-4fef-95ff-c60c55b21fe0</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Admin/User Management/Users/Search User Management</testCaseId>
+      <testCaseId>Test Cases/Admin/User Management/Users/Search User Management by username - Valid</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
       <variableLink>
          <testDataLinkId></testDataLinkId>
